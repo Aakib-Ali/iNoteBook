@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const { Schema}= mongoose;
 const UserSchema = new Schema({
     name:{
         type: String,
@@ -7,11 +8,11 @@ const UserSchema = new Schema({
     email: {
         type:String,
         unique:true,  //email should be unique for every user.
-        required:[true,'Please provide your email']
+        required:true
     },
     password: {
         type: String,
-        required: [true,"Please provide a Password"]
+        required: true
     },
     date: {
         type: Date,
